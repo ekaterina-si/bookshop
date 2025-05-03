@@ -1,7 +1,7 @@
 header.header
   .header__wrapper.container
     a.logo(href="#")
-      img(src="/assets/img/logo.svg", alt="logo")
+      img(src=require('@assets/images/logo.svg'), alt="logo")
     .header__hidden
       nav.nav
         ul
@@ -10,11 +10,11 @@ header.header
           li: a(href="#") Stationery & Gifts
           li: a(href="#") Blog
       .icons
-        button.button-icon: img(src="/assets/img/user.svg", alt="")
-        button.button-icon: img(src="/assets/img/search.svg", alt="")
+        button.button-icon: img(src=require('@assets/images/user.svg'), alt="")
+        button.button-icon: img(src=require('@assets/images/search.svg'), alt="")
         button.button-icon.cart-icon(data-toggle="cart-dropdown")
-          img(src="/assets/img/bag.svg", alt="")
+          img(src=require('@assets/images/bag.svg'), alt="")
           .cart-dropdown.hidden
-            p Корзина пуста
+            p The cart is empty
     .toggle-menu
       span

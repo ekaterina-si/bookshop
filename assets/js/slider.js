@@ -1,7 +1,7 @@
 const slides = [
-  '/assets/img/banner.jpg',
-  '/assets/img/banner2.jpg',
-  '/assets/img/banner3.jpg',
+  'assets/img/banner.jpg',
+  'assets/img/banner2.jpg',
+  'assets/img/banner3.jpg',
 ];
 
 let currentIndex = 0;

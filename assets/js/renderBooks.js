@@ -20,7 +20,7 @@ const renderBooks = async (query, page = pageNum) => {
     card.dataset.bookId = book.id;
 
     const img = card.querySelector('img');
-    img.src = book.volumeInfo.imageLinks?.thumbnail || '/assets/img/gag.jpg';
+    img.src = book.volumeInfo.imageLinks?.thumbnail || 'assets/img/gag.jpg';
     img.alt = book.volumeInfo.title;
 
     const author = card.querySelector('.author');
@@ -39,13 +39,12 @@ const renderBooks = async (query, page = pageNum) => {
       const halfStar = ratingValue % 1 !== 0;
 
       ratingContainer.querySelectorAll('.rating__star').forEach((star, index) => {
-        console.log(index, fullStars, halfStar);
         if (index < fullStars) {
-          star.querySelector('use').setAttribute('mask', `url(#mask-100)`); // Полная звезда
+          star.querySelector('use').setAttribute('mask', `url(#mask-100)`);
         } else if (index === fullStars && halfStar) {
-          star.querySelector('use').setAttribute('mask', `url(#mask-50)`); // Половина звезды
+          star.querySelector('use').setAttribute('mask', `url(#mask-50)`);
         } else {
-          star.querySelector('use').setAttribute('mask', `url(#mask-1)`); // Пустая звезда
+          star.querySelector('use').setAttribute('mask', `url(#mask-1)`);
         }
       });
 
