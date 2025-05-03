@@ -1,1 +1,112 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bookshop</title><link href="/assets/css/main.css" rel="stylesheet"></head><body><header class="header"><div class="header__wrapper container"><a class="logo" href="#"><img src="/assets/img/logo.svg" alt="logo"></a><div class="header__hidden"><nav class="nav"><ul><li class="active"><a href="#">Books</a></li><li><a href="#">Audiobooks</a></li><li><a href="#">Stationery & Gifts</a></li><li><a href="#">Blog</a></li></ul></nav><div class="icons"><button class="button-icon"><img src="/assets/img/user.svg" alt=""></button><button class="button-icon"><img src="/assets/img/search.svg" alt=""></button><button class="button-icon cart-icon" data-toggle="cart-dropdown"><img src="/assets/img/bag.svg" alt=""><div class="cart-dropdown hidden"><p>Корзина пуста</p></div></button></div></div><div class="toggle-menu"><span></span></div></div></header><section class="container hero"><div class="shadow"></div><div class="slider"><div class="slider__image-container"></div><div class="slider__dots" id="dots"></div></div><div class="hero__link hero__link_bg_purple"><a href="#">Change old book on new </a></div><div class="hero__link hero__link_bg_pink"><a href="#">top 100 books 2022 </a></div></section><main class="main container"><aside class="sidebar"><ul id="sidebar"><li class="category active">Architecture</li><li class="category">Art & Fashion</li><li class="category">Biography</li><li class="category">Business</li><li class="category">Crafts & Hobbies</li><li class="category">Drama</li><li class="category">Fiction</li><li class="category">Food & Drink</li><li class="category">Health & Wellbeing</li><li class="category">History & Politics</li><li class="category">Humor</li><li class="category">Poetry</li><li class="category">Psychology</li><li class="category">Science</li><li class="category">Technology</li><li class="category">Travel & Maps</li></ul></aside><svg style="width: 0; height: 0;" viewBox="0 0 32 32"><defs><mask id="mask-1"><rect x="0" y="0" width="32" height="32" fill="#313131"></rect><rect x="0" y="0" width="1%" height="32" fill="white"></rect></mask><mask id="mask-50"><rect x="0" y="0" width="32" height="32" fill="#313131"></rect><rect x="0" y="0" width="50%" height="32" fill="white"></rect></mask><mask id="mask-100"><rect x="0" y="0" width="32" height="32" fill="#313131"></rect><rect x="0" y="0" width="100%" height="32" fill="white"></rect></mask><symbol id="star" viewBox="0 0 32 32"><path d="M16 1.6l4.09 8.29 9.16 1.33-6.63 6.46 1.56 9.11L16 22.77l-8.18 4.3 1.56-9.11-6.63-6.46 9.16-1.33L16 1.6z"></path></symbol></defs></svg><section class="books"><template id="book-card-template"><div class="card"><img class="card__image" src="" alt=""><div class="info"><div class="info__header"><div class="author"></div><div class="title"></div><div class="rating"><p class="rating__stars"><svg class="rating__star" width="32" height="32" viewBox="0 0 32 32"><use href="#star" mask="url(#mask-1)" fill="#F2C94C"></use></svg><svg class="rating__star" width="32" height="32" viewBox="0 0 32 32"><use href="#star" mask="url(#mask-2)" fill="#F2C94C"></use></svg><svg class="rating__star" width="32" height="32" viewBox="0 0 32 32"><use href="#star" mask="url(#mask-3)" fill="#F2C94C"></use></svg><svg class="rating__star" width="32" height="32" viewBox="0 0 32 32"><use href="#star" mask="url(#mask-4)" fill="#F2C94C"></use></svg><svg class="rating__star" width="32" height="32" viewBox="0 0 32 32"><use href="#star" mask="url(#mask-5)" fill="#F2C94C"></use></svg></p></div></div><p class="desc"></p><div class="price"></div><button class="button">Buy Now</button></div></div></template><div class="card-container"></div><div class="load-more"><button class="button">Load More</button></div></section></main><script src="/assets/js/index.js" type="module"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshop</title>
+  <link href="./assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper container"><a class="logo" href="#"><img src="./assets/img/logo.svg" alt="logo"></a>
+      <div class="header__hidden">
+        <nav class="nav">
+          <ul>
+            <li class="active"><a href="#">Books</a></li>
+            <li><a href="#">Audiobooks</a></li>
+            <li><a href="#">Stationery & Gifts</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </nav>
+        <div class="icons"><button class="button-icon"><img src="./assets/img/user.svg" alt=""></button><button class="button-icon"><img src="./assets/img/search.svg" alt=""></button><button class="button-icon cart-icon" data-toggle="cart-dropdown"><img src="./assets/img/bag.svg" alt="">
+            <div class="cart-dropdown hidden">
+              <p>Корзина пуста</p>
+            </div>
+          </button></div>
+      </div>
+      <div class="toggle-menu"><span></span></div>
+    </div>
+  </header>
+  <section class="container hero">
+    <div class="shadow"></div>
+    <div class="slider">
+      <div class="slider__image-container"></div>
+      <div class="slider__dots" id="dots"></div>
+    </div>
+    <div class="hero__link hero__link_bg_purple"><a href="#">Change old book on new </a></div>
+    <div class="hero__link hero__link_bg_pink"><a href="#">top 100 books 2022 </a></div>
+  </section>
+  <main class="main container">
+    <aside class="sidebar">
+      <ul id="sidebar">
+        <li class="category active">Architecture</li>
+        <li class="category">Art & Fashion</li>
+        <li class="category">Biography</li>
+        <li class="category">Business</li>
+        <li class="category">Crafts & Hobbies</li>
+        <li class="category">Drama</li>
+        <li class="category">Fiction</li>
+        <li class="category">Food & Drink</li>
+        <li class="category">Health & Wellbeing</li>
+        <li class="category">History & Politics</li>
+        <li class="category">Humor</li>
+        <li class="category">Poetry</li>
+        <li class="category">Psychology</li>
+        <li class="category">Science</li>
+        <li class="category">Technology</li>
+        <li class="category">Travel & Maps</li>
+      </ul>
+    </aside><svg style="width: 0; height: 0;" viewBox="0 0 32 32">
+      <defs>
+        <mask id="mask-1">
+          <rect x="0" y="0" width="32" height="32" fill="#313131"></rect>
+          <rect x="0" y="0" width="1%" height="32" fill="white"></rect>
+        </mask>
+        <mask id="mask-50">
+          <rect x="0" y="0" width="32" height="32" fill="#313131"></rect>
+          <rect x="0" y="0" width="50%" height="32" fill="white"></rect>
+        </mask>
+        <mask id="mask-100">
+          <rect x="0" y="0" width="32" height="32" fill="#313131"></rect>
+          <rect x="0" y="0" width="100%" height="32" fill="white"></rect>
+        </mask>
+        <symbol id="star" viewBox="0 0 32 32">
+          <path d="M16 1.6l4.09 8.29 9.16 1.33-6.63 6.46 1.56 9.11L16 22.77l-8.18 4.3 1.56-9.11-6.63-6.46 9.16-1.33L16 1.6z"></path>
+        </symbol>
+      </defs>
+    </svg>
+    <section class="books"><template id="book-card-template">
+        <div class="card"><img class="card__image" src="" alt="">
+          <div class="info">
+            <div class="info__header">
+              <div class="author"></div>
+              <div class="title"></div>
+              <div class="rating">
+                <p class="rating__stars"><svg class="rating__star" width="32" height="32" viewBox="0 0 32 32">
+                    <use href="#star" mask="url(#mask-1)" fill="#F2C94C"></use>
+                  </svg><svg class="rating__star" width="32" height="32" viewBox="0 0 32 32">
+                    <use href="#star" mask="url(#mask-2)" fill="#F2C94C"></use>
+                  </svg><svg class="rating__star" width="32" height="32" viewBox="0 0 32 32">
+                    <use href="#star" mask="url(#mask-3)" fill="#F2C94C"></use>
+                  </svg><svg class="rating__star" width="32" height="32" viewBox="0 0 32 32">
+                    <use href="#star" mask="url(#mask-4)" fill="#F2C94C"></use>
+                  </svg><svg class="rating__star" width="32" height="32" viewBox="0 0 32 32">
+                    <use href="#star" mask="url(#mask-5)" fill="#F2C94C"></use>
+                  </svg></p>
+              </div>
+            </div>
+            <p class="desc"></p>
+            <div class="price"></div><button class="button">Buy Now</button>
+          </div>
+        </div>
+      </template>
+      <div class="card-container"></div>
+      <div class="load-more"><button class="button">Load More</button></div>
+    </section>
+  </main>
+  <script src="./assets/js/index.js" type="module"></script>
+</body>
+
+</html>
