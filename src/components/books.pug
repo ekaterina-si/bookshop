@@ -1,0 +1,28 @@
+svg(style="width: 0; height: 0;" viewBox="0 0 32 32")
+  defs
+    each i in [1, 50, 100]
+      mask(id=`mask-${i}`)
+        rect(x="0" y="0" width="32" height="32" fill="#313131")
+        rect(x="0" y="0" width=`${i}%` height="32" fill="white")
+    symbol#star(viewBox="0 0 32 32")
+      path(d="M16 1.6l4.09 8.29 9.16 1.33-6.63 6.46 1.56 9.11L16 22.77l-8.18 4.3 1.56-9.11-6.63-6.46 9.16-1.33L16 1.6z")
+section.books
+
+  template#book-card-template
+    .card
+      img(src="" alt="").card__image
+      .info
+        .info__header
+          .author
+          .title
+          .rating
+            p.rating__stars
+              each i in [1, 2, 3, 4, 5]
+                svg.rating__star(width="32" height="32" viewBox="0 0 32 32")
+                  use(href="#star" mask=`url(#mask-${i})` fill="#F2C94C")
+        p.desc
+        .price
+        button.button Buy Now
+  .card-container
+  .load-more
+    button.button Load More

@@ -1,0 +1,20 @@
+header.header
+  .header__wrapper.container
+    a.logo(href="#")
+      img(src="/assets/img/logo.svg", alt="logo")
+    .header__hidden
+      nav.nav
+        ul
+          li.active: a(href="#") Books
+          li: a(href="#") Audiobooks
+          li: a(href="#") Stationery & Gifts
+          li: a(href="#") Blog
+      .icons
+        button.button-icon: img(src="/assets/img/user.svg", alt="")
+        button.button-icon: img(src="/assets/img/search.svg", alt="")
+        button.button-icon.cart-icon(data-toggle="cart-dropdown")
+          img(src="/assets/img/bag.svg", alt="")
+          .cart-dropdown.hidden
+            p Корзина пуста
+    .toggle-menu
+      span

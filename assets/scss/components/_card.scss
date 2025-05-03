@@ -1,0 +1,99 @@
+@use "../base/variables" as *;
+
+.card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.25rem;
+  align-items: center;
+
+  img {
+    height: 300px;
+    aspect-ratio: 1 / 1.4;
+    object-fit: cover;
+    box-shadow: 0px 24px 36px -16px #35315447;
+
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  .title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .author {
+    font-size: 10px;
+    color: $txt-color-light;
+  }
+
+  .rating {
+    font-size: 0.75rem;
+    color: $txt-color-light;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    &.hidden {
+      display: none;
+    }
+
+    & > svg {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+    }
+
+    &__stars {
+      display: flex;
+    }
+
+    &__star {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .desc {
+    font-size: 10px;
+    color: $txt-color-light;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.3em;
+    height: 3.9em;
+  }
+
+  .price {
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  .button.in-cart {
+    color: $txt-color-light;
+    border-color: $violet-color-light;
+    cursor: default;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
